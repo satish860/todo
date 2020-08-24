@@ -1,0 +1,25 @@
+﻿@model IEnumerable<TodoModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Description</th>
+                <th scope="col">Date Added</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@item.ToDoId</th>
+                    <td>@item.Item</td>
+                    <td>@item.DateAdded</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
